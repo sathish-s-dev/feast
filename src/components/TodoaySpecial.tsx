@@ -1,14 +1,13 @@
-import React from 'react';
+import { Button } from '@material-tailwind/react';
 import {
+	Arrow1,
+	Arrow2,
+	chickPea,
 	spaghetti,
 	spinach,
-	sweetPotato,
-	chickPea,
 	star,
-	Arrow2,
-	Arrow1,
+	sweetPotato,
 } from '../assets';
-import { Button } from '@material-tailwind/react';
 
 const TodoaySpecial = () => {
 	const specialItems = [
