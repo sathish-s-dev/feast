@@ -40,6 +40,7 @@ const TodoaySpecial = () => {
 			rating: 4,
 		},
 	];
+
 	return (
 		<section className='w-full gap-24 flex-col text-center md:p-24 max-w-7xl mx-auto flex justify-center items-center h-full'>
 			<div className='grid gap-3 relative w-full'>
