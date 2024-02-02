@@ -40,12 +40,12 @@ const OurSpecial = () => {
 	};
 
 	return (
-		<section className='grid place-items-center gap-4 p-24'>
-			<p className='text-sm'>Quality food for you</p>
-			<h3 className='font-cinzel text-accent text-3xl'>Our Specialities</h3>
-			<p className='text-sm md:text-md'>
-				Authentic food from our restaurant served with high quality ingredients
-			</p>
+		<section className='grid place-items-center gap-4 md:p-24 text-center'>
+			<TopTextSection
+				smallText='Quality food for you'
+				title='Our Specialities'
+				description='Authentic food from our restaurant served with high quality ingredients'
+			/>
 			<CategoryList
 				categories={categories}
 				defaultCategory={defaultCategory}
@@ -68,7 +68,7 @@ function CategoryList({
 	handleChange: (value: string) => void;
 }) {
 	return (
-		<div className='flex gap-4 flex-wrap'>
+		<div className='flex gap-4 flex-wrap justify-center items-center'>
 			{categories.map((category) => (
 				<Button
 					placeholder={''}
@@ -87,7 +87,7 @@ function CategoryList({
 
 function CategorySection() {
 	return (
-		<div className='grid gap-10'>
+		<div className='grid'>
 			<SpeacialItemCard />
 			<SpeacialItemCard isRight={true} />
 			<SpeacialItemCard />
@@ -101,7 +101,7 @@ function CategorySection() {
 function SpeacialItemCard({ isRight = false }: { isRight?: boolean }) {
 	return (
 		<div
-			className={`flex justify-center items-center flex-col md:flex-row gap-10`}>
+			className={`flex justify-center items-center flex-col md:flex-row gap-10 border border-slate-50/5 p-4`}>
 			<div className={`${isRight ? 'order-last' : ''}`}>
 				<img
 					src='/sushi.png'
@@ -109,7 +109,7 @@ function SpeacialItemCard({ isRight = false }: { isRight?: boolean }) {
 					className=' aspect-video w-full max-w-3xl self-center object-cover'
 				/>
 			</div>
-			<div className='max-w-sm grid gap-2'>
+			<div className='grid gap-2 text-start max-w-xs md:max-w-sm'>
 				<h3 className='font-cinzel text-accent text-2xl'>Sushi</h3>
 				<p className='text-sm md:text-md'>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut
@@ -117,6 +117,26 @@ function SpeacialItemCard({ isRight = false }: { isRight?: boolean }) {
 				</p>
 				<p className='text-accent text-3xl font-cinzel'>$10</p>
 			</div>
+		</div>
+	);
+}
+
+export function TopTextSection({
+	title,
+	description,
+	smallText,
+}: {
+	title: string;
+	description: string;
+	smallText: string;
+}) {
+	return (
+		<div className='grid gap-4 text-center place-items-center'>
+			<p className='text-sm'>{smallText}</p>
+			<h3 className='font-cinzel text-accent text-3xl'>{title}</h3>
+			<p className='text-sm md:text-lg max-w-xl text-center'>
+				{description}
+			</p>{' '}
 		</div>
 	);
 }

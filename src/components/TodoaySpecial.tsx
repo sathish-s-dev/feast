@@ -41,7 +41,7 @@ const TodoaySpecial = () => {
 		},
 	];
 	return (
-		<section className='w-full gap-24 flex-col text-center p-24 max-w-7xl mx-auto flex justify-center items-center h-full'>
+		<section className='w-full gap-24 flex-col text-center md:p-24 max-w-7xl mx-auto flex justify-center items-center h-full'>
 			<div className='grid gap-3 relative w-full'>
 				<img
 					src={Arrow2}
@@ -61,9 +61,12 @@ const TodoaySpecial = () => {
 					className='absolute w-24 h-24 -rotate-45 md:rotate-0 md:w-36 md:h-36 lg:right-24 -right-12 lg:-top-6'
 				/>
 			</div>
-			<div className='gap-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+			<div className='gap-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
 				{specialItems.map((item) => (
-					<FoodCard {...item} />
+					<FoodCard
+						key={item.name}
+						{...item}
+					/>
 				))}
 			</div>
 		</section>
@@ -84,7 +87,7 @@ function FoodCard({
 	rating: number;
 }) {
 	return (
-		<div className='grid gap-4 place-items-start text-start max-w-64  border-slate-200/20 overflow-clip rounded-2xl'>
+		<div className='grid gap-4 place-items-start text-start max-w-72  border-slate-200/20 overflow-clip rounded-2xl'>
 			<img
 				src={image}
 				alt=''
@@ -93,7 +96,7 @@ function FoodCard({
 			<div className='grid gap-4 p-2'>
 				<abbr
 					title={name}
-					className='md:text-lg font-semibold line-clamp-1'>
+					className='md:text-lg cursor-pointer no-underline font-semibold line-clamp-1'>
 					{name}
 				</abbr>
 				<p className='md:text-sm text-xs line-clamp-3 text-slate-300'>

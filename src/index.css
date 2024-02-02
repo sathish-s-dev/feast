@@ -11,4 +11,8 @@
   .no-scrollbar {
     scrollbar-width: none;
   }
+
+  body {
+    overflow-x: hidden;
+  }
 }
