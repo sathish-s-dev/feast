@@ -3,7 +3,7 @@ import { heroBg } from '../assets';
 
 const Hero = () => {
 	return (
-		<div className='relative isolate radial-grad'>
+		<div className='relative isolate'>
 			<div className='min-h-[90vh] flex flex-col justify-center items-center text-center max-w-xl mx-auto gap-6'>
 				<span className='text-sm text-slate-300 tracking-wider'>
 					Best sushi in town
@@ -25,8 +25,9 @@ const Hero = () => {
 			<img
 				src={heroBg}
 				alt=''
-				className='w-full absolute inset-0 h-full opacity-[25%] object-cover -z-10'
+				className='w-full absolute inset-0 h-full opacity-30 object-cover -z-10'
 			/>
+			<div className='w-full h-full absolute inset-0 bg-gradient-to-t from-black -z-[1] via-transparent to-black' />
 		</div>
 	);
 };

@@ -4,7 +4,11 @@
 
 
 @layer utilities {
-  .radial-grad {
-    background-image: radial-gradient(transparent, black 150%)
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
   }
 }

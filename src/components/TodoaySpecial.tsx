@@ -46,19 +46,19 @@ const TodoaySpecial = () => {
 				<img
 					src={Arrow2}
 					alt=''
-					className='absolute  h-36 left-24 -top-6'
+					className='absolute h-24 w-24 rotate-45 md:rotate-0  md:h-36 md:w-36 lg:left-24 -left-16 lg:-top-6'
 				/>
 				<h3 className='text-3xl font-bold tracking-widest text-slate-300 font-cinzel'>
 					Today&apos;s Special
 				</h3>
-				<p className='text-xl max-w-md mx-auto'>
+				<p className='text-sm md:text-xl max-w-md mx-auto'>
 					Special menu oftenly comes different everyday, this is our special
 					food for today
 				</p>
 				<img
 					src={Arrow1}
 					alt=''
-					className='absolute  h-36 right-24 -top-6'
+					className='absolute w-24 h-24 -rotate-45 md:rotate-0 md:w-36 md:h-36 lg:right-24 -right-12 lg:-top-6'
 				/>
 			</div>
 			<div className='gap-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
